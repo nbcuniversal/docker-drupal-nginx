@@ -2,7 +2,8 @@ FROM nginx:alpine
 
 RUN apk update && \
     apk add gettext bash && \
-    mkdir -pv /etc/template.d
+    mkdir -pv /etc/template.d && \
+    rm -fv /etc/nginx/conf.d/default.conf
 
 COPY ./conf.d/*.tpl /etc/template.d/
 COPY entrypoint.sh /entrypoint.sh
