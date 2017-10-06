@@ -12,7 +12,7 @@ if [ -d /etc/template.d ]; then
   echo "==> Generating configuration ${siteInternalUrl}"
   echo "  + Using origin ${siteInternalUrl}"
   echo "  + Using external domain ${siteExternalUrl}"
-  envsubst '\$siteInternalUrl' < /etc/template.d/drupal.conf.tpl > /etc/nginx/conf.d/drupal.conf
+  envsubst '\$siteInternalUrl,\$siteExternalUrl' < /etc/template.d/drupal.conf.tpl > /etc/nginx/conf.d/drupal.conf
 fi
 
 echo '==> Starting NGINX'
