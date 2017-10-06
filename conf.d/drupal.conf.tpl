@@ -1,10 +1,15 @@
 server
 {
+  server_name ${siteExternalUrl};
+  return 301 $scheme://www.${siteExternalUrl}$request_uri;
+}
+
+server
+{
   listen 80;
   listen [::]:80;
   index index.php index.html;
-  server_name ${siteExternalUrl};
-  return 301 $scheme://www.${siteExternalUrl}$request_uri;
+  server_name www.${siteExternalUrl} ${siteInternalUrl};
   error_log /dev/stdout;
   access_log /dev/stdout;
   root /app/docroot;
