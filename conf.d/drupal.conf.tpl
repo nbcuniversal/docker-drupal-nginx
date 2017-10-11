@@ -105,7 +105,7 @@ server
     add_header Access-Control-Allow-Origin *;
   }
 
-  location /health_check
+  location = /health_check
   {
     return 200 'OK';
     access_log off;
