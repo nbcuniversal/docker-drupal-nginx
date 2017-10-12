@@ -14,7 +14,7 @@ server
   access_log /dev/stdout;
   root /app/docroot;
   sendfile off;
-  client_max_body_size 20M;
+  client_max_body_size 200M;
 
   location = /favicon.ico
   {
