@@ -7,7 +7,6 @@ RUN apk update && \
 
 COPY ./conf.d/*.tpl /etc/template.d/
 COPY entrypoint.sh /entrypoint.sh
-COPY ./conf.d/settings.inc /var/www/site-php/settings.inc
 COPY ./conf.d/nginx.conf /etc/nginx/nginx.conf
 
 ENTRYPOINT ["bash", "-c"]
