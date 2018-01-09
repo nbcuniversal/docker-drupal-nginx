@@ -112,4 +112,12 @@ server
     return 200 'OK';
     access_log off;
   }
+
+  location /nginx_status
+  {
+    stub_status on;
+    access_log   off;
+    allow localhost;
+    deny all;
+  }
 }
