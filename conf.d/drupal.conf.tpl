@@ -116,8 +116,6 @@ server
   location /nginx_status
   {
     stub_status on;
-    access_log   off;
-    allow localhost;
-    deny all;
+    access_log  off;
   }
 }
