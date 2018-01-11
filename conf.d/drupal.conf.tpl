@@ -16,15 +16,6 @@ server
   sendfile off;
   client_max_body_size 20M;
 
-  location ~ ^/(status|ping)$
-  {
-     access_log off;
-     allow 127.0.0.1;
-     deny all;
-     include fastcgi_params;
-     fastcgi_pass 127.0.0.1:9000;
-  }
-
   location = /favicon.ico
   {
     log_not_found off;
