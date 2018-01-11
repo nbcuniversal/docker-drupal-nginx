@@ -77,8 +77,6 @@ server
     fastcgi_buffer_size 32k;
     include fastcgi_params;
     fastcgi_read_timeout 3600;
-    fastcgi_send_timeout 300;
-    fastcgi_connect_timeout 300;
     fastcgi_cache off;
     fastcgi_intercept_errors on;
     fastcgi_hide_header \'X-Drupal-Cache\';
