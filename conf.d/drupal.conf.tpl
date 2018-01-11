@@ -10,7 +10,7 @@ server
   listen [::]:80;
   index index.php index.html;
   server_name www.${siteExternalUrl} ${siteInternalUrl};
-  error_log /var/log/nginx/error.log debug;
+  error_log /var/log/nginx/error.log warn;
   access_log /var/log/nginx/access.log;
   root /app/docroot;
   sendfile off;
